@@ -3,6 +3,7 @@ package com.jpa.test.dao;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
+
 //import org.springframework.stereotype.Repository;
 import com.jpa.test.entities.User;
 //import org.springframework.data.repository.CrudRepository;
@@ -56,5 +57,20 @@ import com.jpa.test.entities.User;
 	   //It has to FIND the data ByName with the name equivalent to 'name'.
 	   //Now go back to main method to call this method and run it once to check!
 	   
+	   //Regarding how to write the Method Name, you have to go to the website 
+	   //https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
+	   //and see the 'JPA query methods'. The way how you write the name of the method is very important!
+	   //Otherwise, spring will not understand and will not fire the query automatically, which we are expecting/
+	   
+	   //Some examples are:
+	   //findByNameStartingWith(String prefix)
+	   //findByNameEndingWith(String suffix)
+	   //findByNameContaining(String words)
+	   //findByNameLike(String likePattern)
+	   //findByAgeLessThan(int age)
+	   
+	   //However, if you wnat to write the query by yourself no matter what, and does not want Spring boot to do the magic,
+	   //there is also a way that you can fire query writing hiberate queries inside the custom created methods.
+	   //You can learn the vide of Durgesh for that.. video no. 15
 	   
 }

@@ -1,7 +1,7 @@
 package com.jpa.test;
 
 import java.util.List;
-import java.util.Optional;
+//import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,10 +18,10 @@ public class BootjpaexampleApplication {
 		ApplicationContext context= SpringApplication.run(BootjpaexampleApplication.class, args);
 		
 //	1. We saved the data of 2 Users	
-		User user1= new User();
-		user1.setName("Dines Raj Shrestha");
-		user1.setCity("Toronto");
-		user1.setStatus("I am a React programmer");
+//		User user1= new User();
+//		user1.setName("Dines Raj Shrestha");
+//		user1.setCity("Toronto");
+//		user1.setStatus("I am a React programmer");
 	
 		//Here my object is ready! And I want to save in the database! How can I do that?		
 		
@@ -68,21 +68,21 @@ public class BootjpaexampleApplication {
 	//Remember we do not use class here, we used interface, and write the code as below, which will connect to that Interface!
 	
 		UserRepository userRepository= context.getBean(UserRepository.class);
-		User u = userRepository.save(user1);  //so here this save method is not present in the Interface, howeever, is automatica
-		System.out.println(u);
-	
+//		User u = userRepository.save(user1);  //so here this save method is not present in the Interface, howeever, is automatica
+//		System.out.println(u);
+
 //		How about saving 2 or many objects??
-		User user2 = new User();
-		user2.setName("Ravi Raj Shrestha");
-		user2.setCity("Canada");
-		user2.setStatus("I am a Javascript programmer");		
-		
-		List<User> users= List.of(user1, user2);
-		Iterable<User> result = userRepository.saveAll(users);
-	
-		result.forEach(user-> {
-			System.out.println("Saved all users: " + user );
-		});
+//		User user2 = new User();
+//		user2.setName("Ravi Raj Shrestha");
+//		user2.setCity("Canada");
+//		user2.setStatus("I am a Javascript programmer");		
+////		
+//		List<User> users= List.of(user1, user2);
+//		Iterable<User> result = userRepository.saveAll(users);
+//	
+//		result.forEach(user-> {
+//			System.out.println("Saved all users: " + user );
+//		});
 		
 //2. update the data of user whose id = 1
 //		Optional<User> optional = userRepository.findById(1);
